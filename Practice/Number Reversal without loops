@@ -22,3 +22,37 @@ b=d1+d2+d3+d4+d5;
 printf("Result=%i",b);
     return 0;
 }
+
+#Switch Calculator:
+#include <stdio.h>
+int main() {
+float a,b,c;
+char op;
+printf("Enter number:");
+scanf("%f",&a);
+printf("Enter number:");
+scanf("%f",&b);
+getchar();
+printf("Enter operator:");
+scanf("%c",&op);
+switch(op){
+case '+':
+		c=a+b;
+break;
+case '-':
+		c=a-b;
+break;
+case '*':
+		c=a*b;
+break;
+case '/':
+		if(b==0){
+			printf("Mathematical error");
+		}
+	    else{
+	         c=a/b;  }
+break;
+    	}
+printf("\nResult=%.2f",c);
+    return 0;
+}
